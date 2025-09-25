@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOLAIK InnoBotics</title>
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOLAIK InnoBotics</title>
+  <style>
+    /* Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+    /* Reset & Base */
+    *{margin:0; padding:0; box-sizing:border-box;}
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #eef2ff, #fdf2f8);
+      color: #0f172a;
+      overflow-x: hidden;
+    }
+    a {text-decoration:none; color:#4f46e5; transition:0.3s;}
+    a:hover{color:#9333ea;}
+
+    /* Header */
+    header{
+      position: fixed;
+      top:0;
+      width:100%;
+      background: rgba(79,70,229,0.95);
+      color:white;
+      padding:1rem 2rem;
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+      z-index:1000;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
+    header h1{font-size:1.6rem; font-weight:700;}
+    nav a{margin-left:1.5rem; font-weight:500; color:white;}
+    nav a:hover{text-decoration:underline;}
+
+    /* Hero Section */
+    .hero{
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:0 20px;
+      background: linear-gradient(to bottom right, #eef2ff, #fdf2f8);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero h2{
+      font-size:3rem;
+      color:#4f46e5;
+      margin-bottom:1rem;
+      opacity:0;
+      transform:translateY(-20px);
+      transition: all 1s ease;
+    }
+    .hero p{
+      max-width:700px;
+      font-size:1.2rem;
+      color:#374151;
+      margin-bottom:2rem;
+      opacity:0;
+      transform:translateY(-20px);
+      transition: all 1s ease 0.3s;
+    }
+    .btn{
+      display:inline-block;
+      padding: 14px 28px;
+      background: #4f46e5;
+      color:white;
+      border-radius: 12px;
+      font-weight:600;
+      font-size:1rem;
+      transition:0.3s;
+      opacity:0;
+      transform:translateY(-20px);
+    }
+    .btn:hover{
+      background:#4338ca;
+      transform:translateY(-5px);
+    }
+
+    /* Animation class visible */
+    .visible{opacity:1; transform:translateY(0);}
+
+    /* Floating circles for background */
+    .circle{
+      position:absolute;
+      border-radius:50%;
+      background: rgba(79,70,229,0.15);
+      animation: float 10s linear infinite;
+    }
+    .circle1{width:200px; height:200px; top:10%; left:5%; animation-delay:0s;}
+    .circle2{width:300px; height:300px; bottom:5%; right:10%; animation-delay:2s;}
+    .circle3{width:150px; height:150px; top:50%; right:30%; animation-delay:4s;}
+
+    @keyframes float{
+      0%{transform: translateY(0) rotate(0deg);}
+      50%{transform: translateY(-30px) rotate(180deg);}
+      100%{transform: translateY(0) rotate(360deg);}
+    }
+
+    /* Footer */
+    footer{
+      text-align:center;
+      padding:2rem;
+      font-size:0.9rem;
+      color:#6b7280;
+      background:#f1f5f9;
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+      .hero h2{font-size:2.2rem;}
+      .hero p{font-size:1rem;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HOLAIK InnoBotics</h1>
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="propos.html">À propos</a>
+      <a href="fonction.html">Fonctionnement RAE</a>
+      <a href="collab.html">Collaboration</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="accueil">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+
+    <h2 id="hero-title">Bienvenue sur HOLAIK InnoBotics</h2>
+    <p id="hero-text">Présentation personnelle et du groupe <strong>InnoBotics</strong>, qui développe des solutions technologiques innovantes. Notre projet phare actuel est le robot éducatif <strong>RAE</strong>, encore en phase de conception. Découvrez nos projets et contactez-nous pour toute collaboration ou sponsoring.</p>
+    <a href="#contact" class="btn" id="hero-btn">Bienvenue sur le site de HOLAIK InnoBotics !
+Ici, vous pourrez découvrir nos projets en cours de développement ainsi que ceux déjà réalisés.
+Vous trouverez également des informations sur notre équipe, nos compétences et ce que nous pouvons partager avec chacun.
+Nous vous souhaitons une agréable visite !</a>
+  </section>
+
+  <footer>
+    © <script>document.write(new Date().getFullYear())</script> HOLAIK InnoBotics. Tous droits réservés.
+  </footer>
+
+  <script>
+    // Animation on load
+    window.addEventListener('DOMContentLoaded', ()=>{
+      document.getElementById('hero-title').classList.add('visible');
+      document.getElementById('hero-text').classList.add('visible');
+      document.getElementById('hero-btn').classList.add('visible');
+    });
+  </script>
+</body>
+</html>
+

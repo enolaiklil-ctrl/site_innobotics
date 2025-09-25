@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fonctionnement</title>
+</head>
+<body>
+    <style>
+        /* CSS pour Fonctionnement du Robot RAE */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* Variables couleurs */
+:root {
+  --bg: #f7f9fb;
+  --card: #ffffff;
+  --accent: #4f46e5;
+  --accent2: #9333ea;
+  --text: #0f172a;
+  --muted: #6b7280;
+  --shadow: 0 6px 18px rgba(15,23,42,0.08);
+  --radius: 12px;
+  --max-width: 1000px;
+}
+
+/* Reset simple */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Container */
+section#fonctionnement {
+  max-width: var(--max-width);
+  width: 100%;
+  background: white;
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: var(--shadow);
+}
+
+/* Titres et paragraphes */
+section#fonctionnement h2 {
+  color: var(--accent);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+section#fonctionnement p {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Media blocks (vidéo / image) */
+.media-block {
+  margin: 20px 0;
+  text-align: center;
+}
+.media-block video,
+.media-block img {
+  max-width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Liste fonctionnalités */
+ul {
+  list-style: disc;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+ul li {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Hover / interaction pour image */
+.media-block img:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+
+/* Lien retour accueil */
+body > a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 16px;
+  background: var(--accent);
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+body > a:hover {
+  background: var(--accent2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  section#fonctionnement {
+    padding: 24px;
+  }
+  section#fonctionnement h2 {
+    font-size: 1.6rem;
+  }
+  ul li {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    padding: 20px 10px;
+  }
+}
+
+    </style>
+    <style>
+        
+    </style>
+    <section id="fonctionnement">
+    <h2>Fonctionnement du Robot Assistant Éducatif (RAE)</h2>
+    <p>Le robot éducatif RAE propose des fonctionnalités variées pour enrichir l’expérience d’apprentissage :</p>
+
+    <div class="media-block">
+      <video controls width="600">
+        <source src="videos/intro-robot.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture vidéo.
+      </video>
+    </div>
+
+    <ul>
+      <li>Assistance vocale interactive</li>
+      <li>
+        Interface utilisateur intuitive
+        <div class="media-block">
+          <img src="images/interface.jpg" alt="Aperçu de l'interface utilisateur">
+          <p>Une interface claire et efficace, conçue pour rendre l’utilisation simple et agréable.</p>
+        </div>
+      </li>
+      <li>Simulation 3D réaliste</li>
+      <li>Modules d’apprentissage personnalisés</li>
+    </ul>
+  </section>
+  <a href="index.html">Accueil</a>
+</body>
+</html>
